@@ -8,7 +8,7 @@ This package ports the XMODEM, YMODEM and ZMODEM protocols to Python. We try to
 implement the protocols as minimalistic as possible without breaking the
 protocol specifications.
 
-The interface to most modem classes are pretty similair. Keep in mind though,
+The interface to most modem classes are pretty similar. Keep in mind though,
 that the XMODEM protocol can send one file (stream) at a time, whereas the
 YMODEM and ZMODEM protocols can send multiple.
 
@@ -24,11 +24,11 @@ An example using ``STDIN``/``STDOUT`` may read::
 
     >>> import select
     >>> import sys
-    >>> def getc(size, timeout=5):
+    >>> def getc(size, timeout=5, debug=False):
     ...     r, w, e = select.select([sys.stdin.fileno()], [], [], timeout)
     ...     if r: return sys.stdin.read(size)
     ...
-    >>> def putc(data, timeout):
+    >>> def putc(data, timeout, debug=False):
     ...     r, w, e = select.select([], [sys.stdout.fileno()], [], timeout)
     ...     if w: return sys.stdout.write(data)
     ...

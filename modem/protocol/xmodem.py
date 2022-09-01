@@ -10,10 +10,10 @@ class XMODEM(Modem):
     XMODEM protocol implementation, expects an object to read from and an
     object to write to.
 
-    >>> def getc(size, timeout=1):
+    >>> def getc(size, timeout=1, debug=False):
     ...     return data or None
     ...
-    >>> def putc(data, timeout=1):
+    >>> def putc(data, timeout=1, debug=False):
     ...     return size or None
     ...
     >>> modem = XMODEM(getc, putc)
@@ -38,7 +38,7 @@ class XMODEM(Modem):
             >>> print modem.send(stream)
             True
 
-        Returns ``True`` upon succesful transmission or ``False`` in case of
+        Returns ``True`` upon successful transmission or ``False`` in case of
         failure.
         '''
 

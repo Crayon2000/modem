@@ -22,7 +22,7 @@ class YMODEM(XMODEM):
             >>> print modem.send('*.txt')
             True
 
-        Returns ``True`` upon succesful transmission or ``False`` in case of
+        Returns ``True`` upon successful transmission or ``False`` in case of
         failure.
         '''
 
